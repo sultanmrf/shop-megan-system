@@ -40,7 +40,7 @@
       </div>
       <div class="grid grid-cols-12 gap-4 leading-8">
         <div class="col-span-12 lg:col-span-5">
-          <img class="mb-4" src="@/assets/images/logo.png" alt="">
+          <img class="mb-4" src="@/assets/images/logo-white.png" alt="">
           <p>
             ترازو با فراهم آوردن تنوع معقولی از محصولات در کنار عرضه با قیمت مناسب آن‌ها، به دنبال خرید راحت و رضایت‌بخش ابزارآلات برای همراهان خودش است و این مهم را با مهیا کردن امکان بررسی فنی و کاربردی ابزارآلات و ارائه محتوای مناسب و غنی محقق می‌سازد.
           </p>

@@ -22,16 +22,15 @@
         <h2 class="font-YekanBakh-ExtraBlack text-3xl">دسته بندی محصولات</h2>
       </div>
       <swiper class="cat-slider" :modules="modules"
-               :slides-per-view="1"
+               :slides-per-view="5"
                :space-between="20"
                :scrollbar="{ draggable: true }">
-        <swiper-slide>
-          <category source-img="src/assets/images/graphic/1.webp" alt-img="رینگ ابزار" title-img="رینگ ابزار"/>
+        <swiper-slide v-for="(category, index) in categories">
+          <category :source-img="category.source_img" :alt-img="category.title" :title-img="category.title"/>
         </swiper-slide>
       </swiper>
     </div>
   </section>
-
 </template>
 
 <script setup>
@@ -40,7 +39,14 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Category from "@/components/Category.vue";
+import {useShopStore} from "@/stores/index"
 let modules = [Navigation, Pagination, Scrollbar, A11y];
+let store = useShopStore();
+store.fetchDataProduct();
+store.fetchDataCategories();
+
+let products = store.getProducts;
+let categories = store.getCategories;
 </script>
 
 <style scoped>
