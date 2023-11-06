@@ -1,27 +1,33 @@
 {
   "categories": [
     {
+      "id": 1,
       "title": "کارت گرافیک",
       "source_img": "src/assets/images/categories/graphic.svg"
     },
     {
+      "id": 2,
       "title": "مادربرد",
       "source_img": "src/assets/images/categories/maderbord.svg"
     },
     {
+      "id": 3,
       "title": "مانیتور",
       "source_img": "src/assets/images/categories/monitor.svg"
     },
     {
+      "id": 4,
       "title": "پردازنده",
       "source_img": "src/assets/images/categories/cpu.svg"
     },
     {
+      "id": 5,
       "title": "کیبورد و ماوس",
       "source_img": "src/assets/images/categories/keyboardAndMouse.svg"
     },
     {
-      "title": "کیبورد و ماوس",
+      "id": 6,
+      "title": "بازی کنسول",
       "source_img": "src/assets/images/categories/keyboardAndMouse.svg"
     }
   ]

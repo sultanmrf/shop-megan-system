@@ -2,3 +2,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer custom-style{
+    root{
+        --color-yellow: #fbbf24;
+        --color-red: #ef4444
+    }
+
+    header a, footer a{
+        padding-bottom: 4px;
+        position: relative;
+    }
+
+    header a:after, footer a:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0;
+        background-color: #f92c1c;
+        transition: linear .3s;
+    }
+
+    header a:hover:after, footer a:hover:after{
+        width: 100%;
+    }
+}

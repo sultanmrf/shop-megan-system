@@ -1,5 +1,5 @@
 <template>
-  <header class="section-header bg-white px-4">
+  <header class="section-header sticky top-0 z-50 shadow-lg bg-white px-4">
     <div class="container mx-auto max-w-screen-xl">
       <div class="flex items-center justify-between gap-4 lg:gap-40 py-6">
         <div class="lg:hidden leading-none z-10">
@@ -27,13 +27,13 @@
                     </svg>
                   </label>
                 </div>
-                <li><router-link to="/">صفحه اصلی</router-link></li>
-                <li><router-link to="products">فروشگاه</router-link></li>
-                <li><router-link to="checkout">جزئیات پرداخت</router-link></li>
-                <li><router-link to="comparison">مقایسه محصول</router-link></li>
-                <li><router-link to="blog">وبلاگ</router-link></li>
-                <li><router-link to="about-us">درباره ما</router-link></li>
-                <li><router-link to="contact-us">تماس با ما</router-link></li>
+                <li><router-link to="/home">صفحه اصلی</router-link></li>
+                <li><router-link to="/shop">فروشگاه</router-link></li>
+                <li><router-link to="/checkout">جزئیات پرداخت</router-link></li>
+                <li><router-link to="/comparison">مقایسه محصول</router-link></li>
+                <li><router-link to="/blog">وبلاگ</router-link></li>
+                <li><router-link to="/about-us">درباره ما</router-link></li>
+                <li><router-link to="/contact-us">تماس با ما</router-link></li>
               </ul>
             </div>
           </div>
@@ -42,7 +42,7 @@
           <div><a href="index.html"><img src="@/assets/images/logo.png" alt="" width="150" height="50"></a></div>
           <div class="hidden lg:block form-control w-full">
             <div class="relative">
-              <input type="text" placeholder="جستجو کنید در تراز و ..." class="input input-bordered w-full placeholder:text-sm" />
+              <input type="text" placeholder="به دنبال چه چیزی می گردید ؟" class="input input-bordered w-full placeholder:text-sm" />
               <button class="btn absolute top-0 left-0 rounded-r-none">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -90,13 +90,13 @@
         <div class="flex items-center gap-8">
           <div class="hidden lg:block">
             <ul class="flex gap-x-10">
-              <li><router-link to="/">صفحه اصلی</router-link></li>
-              <li><router-link to="products">فروشگاه</router-link></li>
-              <li><router-link to="checkout">جزئیات پرداخت</router-link></li>
-              <li><router-link to="comparison">مقایسه محصول</router-link></li>
-              <li><router-link to="blog">وبلاگ</router-link></li>
-              <li><router-link to="about-us">درباره ما</router-link></li>
-              <li><router-link to="contact-us">تماس با ما</router-link></li>
+              <li><router-link to="/home">صفحه اصلی</router-link></li>
+              <li><router-link to="/shop">فروشگاه</router-link></li>
+              <li><router-link to="/checkout">جزئیات پرداخت</router-link></li>
+              <li><router-link to="/comparison">مقایسه محصول</router-link></li>
+              <li><router-link to="/blog">وبلاگ</router-link></li>
+              <li><router-link to="/about-us">درباره ما</router-link></li>
+              <li><router-link to="/contact-us">تماس با ما</router-link></li>
             </ul>
           </div>
         </div>
