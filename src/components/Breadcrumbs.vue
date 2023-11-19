@@ -3,7 +3,7 @@
     <div class="text-sm list-breadcrumbs">
       <ul class="flex gap-3">
         <li>
-          <router-link to="/home">خانه</router-link>
+          <router-link to="/">خانه</router-link>
         </li>
         <li class="before:content-['>'] before:pe-2" v-for="breadcrumb in prop.breadcrumbs">
           <span v-if="breadcrumb.link === undefined" v-text="breadcrumb.title"></span>

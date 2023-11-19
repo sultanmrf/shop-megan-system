@@ -1,6 +1,6 @@
 <template>
   <breadcrumbs :breadcrumbs="[{title: 'دسته بندی'},{title: 'جزئیات محصول'}]"/>
-  <section class="section-product-info">
+  <section v-if="product" class="section-product-info">
     <div class="bg-white p-4 rounded-3xl">
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-12 md:col-span-4">
@@ -28,7 +28,7 @@
             </swiper-slide>
           </swiper>
         </div>
-        <div class="col-span-12 md:col-span-8">
+        <div v-if="product" class="col-span-12 md:col-span-8">
           <div class= "p-4">
             <div class="bg-stone-50 rounded-xl p-4 leading-8">
               <h1 class="font-YekanBakh-ExtraBold text-base" v-text="product.title"></h1>
@@ -40,8 +40,8 @@
                   <li v-for="pro_details in product.details">{{ pro_details }}</li>
                 </ul>
                 <div class="flex gap-4 text-base mt-4">
-                  <span class="line-through">{{ store.currency}} {{product.offPrice}}</span>
-                  <span class="text-yellow-500">{{ store.currency}} {{product.price}}</span>
+                  <span class="line-through">{{ numberFormat(product.offPrice) }} {{ store.currency }} </span>
+                  <span class="text-yellow-500">{{ numberFormat(product.price) }} {{ store.currency }}</span>
                 </div>
                 <button class="btn bg-stone-800 hover:bg-stone-900 text-white my-6">افزودن به سبد خرید</button>
                 <div>
@@ -55,7 +55,7 @@
       </div>
     </div>
   </section>
-  <section class="section-description">
+  <section v-if="product" class="section-description">
     <div class="bg-white rounded-3xl p-8 leading-8">
       <p class="text-3xl font-YekanBakh-ExtraBlack mb-4">توضیحات</p>
       <p>{{ product.description}}</p>
@@ -71,20 +71,22 @@ import { useRoute } from 'vue-router';
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation';
-import {useShopStore} from "@/stores/index"
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import PurchaseGuarantee from "@/components/PurchaseGuarantee.vue";
+import {numberFormat} from "@/helpers/numberFormat";
 
 let modules = [Navigation, Pagination, Scrollbar, A11y, Autoplay, Thumbs],
     store = inject("store_data"),
     route = useRoute(),
-    product = {},
     thumbsSwiper = ref(null),
     setThumbsSwiper = (swiper) => {
       thumbsSwiper.value = swiper;
-    };
+    },
+    product = ref([])
 
-product = store.getProduct(route.params.id);
+store.fetchGetProduct(route.params.id);
+product = store.getProduct;
+
 </script>
 
 <style scoped lang="scss">

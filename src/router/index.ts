@@ -11,7 +11,6 @@ import Error404 from '../views/404.vue'
 import Blog from '../views/Blog.vue'
 import ShowBlog from '../views/ShowBlog.vue'
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -21,9 +20,9 @@ const router = createRouter({
       component: Index,
       children: [
         {
-          path: 'home',
+          path: '/',
           name: 'home',
-          component: Home,
+          component: Home
         },
         {
           path: 'shop',

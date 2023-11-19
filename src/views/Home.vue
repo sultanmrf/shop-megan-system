@@ -21,11 +21,25 @@
       <div class="text-center mb-8">
         <h2 class="font-YekanBakh-ExtraBlack text-3xl">دسته بندی محصولات</h2>
       </div>
-      <swiper class="cat-slider" :modules="modules"
+      <swiper class="cat-slider py-1" :modules="modules"
               :slides-per-view="5"
               :space-between="20"
-              :scrollbar="{ draggable: true }">
-        <swiper-slide v-for="(category, index) in categories" :key="category.title">
+              :scrollbar="{ draggable: true }"
+              :breakpoints="{
+                 300: {
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 15,
+                },
+                1024: {
+                  slidesPerView: 6,
+                  spaceBetween: 15,
+                },
+            }">
+        <swiper-slide v-for="(category, index) in categories" :key="category.title" cl>
           <category :source-img="category.source_img" :alt-img="category.title" :title-img="category.title"/>
         </swiper-slide>
       </swiper>
@@ -37,7 +51,7 @@
         </div>
         <div class="grid grid-cols-12 gap-4 p-4">
           <div class="col-span-12 lg:col-span-9">
-            <swiper class="slider-product1" :modules="modules"
+            <swiper class="slider-product1 py-1" :modules="modules"
                     :slides-per-view="3"
                     :space-between="20"
                     :scrollbar="{ draggable: true }">
@@ -54,7 +68,7 @@
       <div class="text-center mb-8">
         <h2 class="font-YekanBakh-ExtraBlack text-3xl">جدیدترین محصولات</h2>
       </div>
-      <swiper class="slider-product1" :modules="modules"
+      <swiper class="slider-product1 py-1" :modules="modules"
               :slides-per-view="4"
               :space-between="20"
               :scrollbar="{ draggable: true }">
@@ -100,8 +114,6 @@ import CardDiscount from "@/components/CardDiscount.vue"
 import {inject} from "vue";
 let modules = [Navigation, Pagination, Scrollbar, A11y, Autoplay];
 let store = inject("store_data");
-store.fetchDataCategories();
-
 let products = store.getProducts,
     categories = store.getCategories,
     productNew = store.getProductsNew;

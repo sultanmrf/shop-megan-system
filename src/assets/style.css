@@ -4,6 +4,13 @@
 @tailwind utilities;
 
 @layer custom-style{
+
+    body *{
+        font-family: YekanBakh-Regular;
+        font-weight: 500;
+    }
+
+
     root{
         --color-yellow: #fbbf24;
         --color-red: #ef4444

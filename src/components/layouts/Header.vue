@@ -27,7 +27,7 @@
                     </svg>
                   </label>
                 </div>
-                <li><router-link to="/home">صفحه اصلی</router-link></li>
+                <li><router-link to="/">صفحه اصلی</router-link></li>
                 <li><router-link to="/shop">فروشگاه</router-link></li>
                 <li><router-link to="/checkout">جزئیات پرداخت</router-link></li>
                 <li><router-link to="/comparison">مقایسه محصول</router-link></li>
@@ -90,7 +90,7 @@
         <div class="flex items-center gap-8">
           <div class="hidden lg:block">
             <ul class="flex gap-x-10">
-              <li><router-link to="/home">صفحه اصلی</router-link></li>
+              <li><router-link to="/">صفحه اصلی</router-link></li>
               <li><router-link to="/shop">فروشگاه</router-link></li>
               <li><router-link to="/checkout">جزئیات پرداخت</router-link></li>
               <li><router-link to="/comparison">مقایسه محصول</router-link></li>

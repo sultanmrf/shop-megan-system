@@ -1,13 +1,6 @@
 <script setup>
-import Header from "../components/layouts/Header.vue"
-import Footer from "../components/layouts/Footer.vue"
-
-import {useShopStore} from "@/stores/index"
-import {provide} from "vue";
-
-let store = useShopStore();
-store.fetchDataProduct();
-provide("store_data" , store)
+import Header from "@/components/layouts/Header.vue"
+import Footer from "@/components/layouts/Footer.vue"
 </script>
 
 <template>
@@ -19,7 +12,6 @@ provide("store_data" , store)
 
   <Footer/>
 </template>
-
 
 <style scoped>
 

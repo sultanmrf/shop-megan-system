@@ -11,7 +11,7 @@
         <div class="col-span-12 lg:col-span-2 text-right md:text-center">
           <h3 class="font-YekanBakh-Bold text-white mb-4 text-lg">دسترسی سریع</h3>
           <ul>
-            <li><router-link to="/home">صفحه اصلی</router-link></li>
+            <li><router-link to="/">صفحه اصلی</router-link></li>
             <li><router-link to="/shop">فروشگاه</router-link></li>
 <!--            <li><router-link to="question">سوالات متداول</router-link></li>-->
             <li><router-link to="/contact-us">تماس با ما</router-link></li>

@@ -1,0 +1,20 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "title": "ای ام دی (AMD)"
+    },
+    {
+      "id": 2,
+      "title": "ایسوس (ASUS)"
+    },
+    {
+      "id": 3,
+      "title": "گیگابایت (GIGABYTE)"
+    },
+    {
+      "id": 4,
+      "title": "اینتل (INTEL)"
+    }
+  ]
+}

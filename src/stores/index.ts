@@ -1,26 +1,33 @@
 import {defineStore} from "pinia";
 import axios from "axios";
-import {computed} from "vue";
+import {computed, reactive, ref} from "vue";
 
 export const useShopStore = defineStore('shop', {
     state: () => ({
         products: [],
+        product: "",
         brands: [],
         categories: [],
         currency: "تومان"
     }),
     getters: {
         getProducts(state){
-            return computed(() => state.products)
+            return computed(() => state.products);
         },
         getCategories(state){
-            return computed(() => state.categories)
+            return computed(() => state.categories);
         },
         getProductsNew(state){
-            return computed(() => state.products.filter((item) => item.id >= 4))
+            return computed(() => state.products.filter((item) => item.id >= 4));
         },
         getBrands(state){
-            return computed(() => state.brands)
+            return computed(() => state.brands);
+        },
+        getProduct(state){
+            return computed(() => state.product);
+        },
+        getCurrency(state){
+            return state.currency;
         },
     },
     actions: {
@@ -33,13 +40,12 @@ export const useShopStore = defineStore('shop', {
             this.categories = response.data.categories;
         },
         async fetchDataBrands(){
-            const response = await axios.get("/src/assets/api/products.json");
-            console.log(response.data)
+            const response = await axios.get("/src/assets/api/brands.json");
             this.brands = response.data.brands;
         },
-         getProduct(pro_id){
-            let product = this.products.filter((item) => item.id == pro_id);
-            return product[0];
+        async fetchGetProduct(pro_id){
+            let response = await axios.get("/src/assets/api/products.json");
+            this.product = response.data.products.filter((item) => item.id == pro_id)[0];
         }
     },
 })
