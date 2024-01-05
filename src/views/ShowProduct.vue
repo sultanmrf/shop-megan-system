@@ -81,11 +81,10 @@ let modules = [Navigation, Pagination, Scrollbar, A11y, Autoplay, Thumbs],
     thumbsSwiper = ref(null),
     setThumbsSwiper = (swiper) => {
       thumbsSwiper.value = swiper;
-    },
-    product = ref([])
+    };
 
 store.fetchGetProduct(route.params.id);
-product = store.getProduct;
+let product = store.getProduct;
 
 </script>
 

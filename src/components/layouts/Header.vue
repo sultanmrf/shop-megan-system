@@ -58,13 +58,9 @@
             </svg>
             </a>
           </div>
-          <div class="hidden lg:block"><a href="login.html">ورود / ثبت نام</a></div>
-          <a href="login.html">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:hidden">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-            </svg>
-          </a>
-
+          <div class="hidden lg:block">
+            <router-link to="/login">ورود / ثبت نام</router-link>
+          </div>
           <div class="indicator">
             <span class="indicator-item badge bg-yellow-400">4+</span>
             <a href="cart.html" class="p-1">

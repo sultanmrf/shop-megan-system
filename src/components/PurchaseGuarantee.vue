@@ -49,19 +49,10 @@
       <span class="mr-2">تایید فروشنده توسط ترازو</span>
     </div>
   </div>
-{{modelValue}}
-  <button class="btn" @click="start">بزن بریم</button>
 </template>
 
 <script setup lang="ts">
-import { defineEmits, defineProps} from "vue";
 
-let prop = defineProps(['modelValue']);
-let emit = defineEmits(['update:modelValue']);
-
-function start(){
-  emit('update:modelValue', "lila");
-}
 </script>
 
 <style scoped>
